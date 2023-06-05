@@ -1,0 +1,300 @@
+html{
+    box-sizing: border-box;
+    background-image:url('background.png');
+}
+.card{ 
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+    perspective:1000px;
+    max-width: 75%;    
+}
+.con .card{
+    background-color: #2B2A3C;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.swal2-popup.swal2-modal.swal2-show{
+    background-color: #2B2A3C;
+    color:#f6fcfa;
+}
+.swal2-popup.swal2-modal.swal2-show button{
+    background-color: #EE8A42;
+    color:#f6fcfa;
+    border : none;
+}
+#timer{
+    font-size: 4rem;
+    color:#EE8A42;
+    text-align: center;
+}
+section{
+    position:relative;
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+section .row{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+section .row i{
+    transform: rotate(-20deg); 
+    padding: 25px;
+    color:rgb(107, 226, 43,.2);
+}
+.easy-padding{
+    padding:15px;
+    padding-top:18px;
+    margin-top:80px;
+}
+.medium-padding{
+    padding:10px;
+    padding-top:18px;
+}
+.hard-padding{
+    padding:0px;
+}
+.easy-width{
+    width:640px;
+    height: 340px;
+}
+.hard-width{
+    width:640px;
+    height: 500px;
+}
+.hard-width .memory{
+    height: 17%;
+}
+.card.hard-width .memory .front-face{
+    height: 85%; 
+}
+.card.hard-width .memory .back-face{
+    height: 85%;
+}
+.card.hard-width .memory .c .fa-solid::before{
+    font-size: 2.7rem;
+}
+.card.easy-width  .fa-solid::before{
+    font-size: 4rem;
+    position: relative;
+    top: 20px;
+}
+.medium-width{
+    width:640px;
+    height: 500px;
+}
+.start-form{
+    width:75%;
+    height: 85%;
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+    margin-top: 40px;
+    perspective:1000px;
+}
+.back-face.c{
+    background-image: url('cardBackground.png');
+}
+.memory,.play-card{
+    width:calc(25% - 10px);
+    height:calc(20.333% - 10px);
+    position: relative;
+    margin:0 5px ;
+    transform-style: preserve-3d;
+    transition: transform .5s;    
+}
+.play-card{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    color:#f6fcfa;
+    margin-top: 10rem;
+    font-size: 2rem;
+    padding:1rem 0;
+    border-radius: 5px;
+    background-color: #2B2A3C;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.play-card button,.play-card .start button{
+    background-color:#EE8A42;
+    color:#f6fcfa;
+}
+.c{
+    width: 150px;
+    height: 150px;
+    background-color:#EE8A42;
+    text-align: center;
+    margin: auto;
+    padding-top:2rem;
+}
+.flip{
+    transform: rotateY(180deg);
+    transition:transform .3s ease;
+}
+.front-face,.back-face{
+    position:absolute;
+    backface-visibility: hidden;
+    width:100%;
+    padding:100%;
+    padding:20px;
+    backface-visibility: hidden;
+}
+.front-face{
+    transform: rotateY(180deg);
+    transition:transform .3s ease;
+}
+.fade{
+    display:none;
+    transition: display 2s ease;
+}
+.ca{
+    width: 80px;
+    height: 100px;
+    background-color:#ccc;
+    text-align: center;
+    margin: auto;
+    padding-top:2rem;  
+}
+.fa-solid{
+    width:100px;
+    color:#f6fcfa;
+    display: none;
+    position: relative;
+}
+.card.medium-width .fa-solid{
+    font-size: 5rem;
+}
+.card.easy-width .fa-solid{
+    left: 0;      
+}
+.hide{
+    display: none;
+}
+.show{
+    display: inline-block;
+    transition: display .5s ease-out;
+}
+.flp{
+    transform: rotateY(-180deg);
+    transition:all .5s ease;
+    background-color: rgb(107, 226, 43);
+
+}
+.flop{
+    display:inline-block;
+    transition: all .4s ease-in-out;
+}
+.disable{
+    pointer-events: none;
+}
+.green-background{
+    background-color: #2c8c6d;
+}
+
+@keyframes fad-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    100%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 1;
+    }
+}
+@keyframes slide-up {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+@media screen and (max-width: 820px){
+    .play-card{
+        width: 400px;
+        margin-left: 10px;
+    }
+   .start-form h1 {
+       font-size: 1.2rem;
+   }
+   .start-form h2 {
+       font-size: 1.3rem;
+   }
+   .fa-solid::before{
+    font-size: 4rem;
+   }
+   .back-face.c,.front-face.c{
+       height: 150px;
+   }
+   .card.hard-width .memory .c .fa-solid::before{
+    font-size: 2.7rem;
+    bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 680px){
+  
+    .back-face.c,.front-face.c{
+        width:100%;
+        height:90px;
+    }
+ 
+     .easy-width{
+        height: 280px;
+    }
+    .medium-width{
+        height: 310px;
+    }
+    .medium-width .front-face i{
+        left: 30%;
+    }
+    .fa-solid{
+        left: 30%;
+        font-size: 3.5rem;
+        padding-right: 4.8rem;
+        padding-top: 0;
+    }
+        .fa-solid::before{
+        font-size: 2.7rem;
+       }
+       .card.medium-width .fa-solid{
+        bottom: 20px;
+        left: 20%;
+       }
+       .card.medium-width .fa-solid.egg{
+        left: 30%;
+       }
+       .card.easy-width .fa-solid{
+        bottom: 20px;
+        left: 0%;
+       }
+       .card.easy-width .fa-solid::before{
+        font-size: 3rem;
+       }
+       .card.hard-width .fa-solid::before{
+        font-size: 2rem;       
+    }
+   
+       .card.hard-width .fa-solid{
+        left: 0%;
+        bottom: 20px;       
+    }
+   
+}
+
+
