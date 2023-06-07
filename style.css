@@ -135,7 +135,10 @@ section .row i{
 }
 .flip{
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg); 
+    -webkit-transform: rotateY(180deg);              
+    -moz-transform: rotateY(180deg);              
+    -ms-transform: rotateY(180deg);              
+    -o-transform: rotateY(180deg);              
     transition:transform .3s ease;
 }
 .front-face,.back-face{
@@ -267,7 +270,7 @@ section .row i{
         height: 310px;
     }
     .medium-width .front-face i{
-        left: 30%;
+        left: 0%;
     }
     .fa-solid{
         left: 30%;
