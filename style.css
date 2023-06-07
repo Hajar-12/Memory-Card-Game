@@ -42,6 +42,7 @@ section .row{
 }
 section .row i{
     transform: rotate(-20deg); 
+    -webkit-transform:rotate(-20deg);
     padding: 25px;
     color:rgb(107, 226, 43,.2);
 }
@@ -183,6 +184,7 @@ section .row i{
 }
 .flp{
     transform: rotateY(-180deg);
+    -webkit-transform:rotateY(-180deg);
     transition:all .5s ease;
     background-color: rgb(107, 226, 43);
 
@@ -217,9 +219,11 @@ section .row i{
 @keyframes slide-up {
     0%{
         transform: translateY(100%);
+        -webkit-transform:translateY(100%);
     }
     100%{
         transform: translateY(0%);
+        -webkit-transform:translateY(0%);
     }
 }
 
