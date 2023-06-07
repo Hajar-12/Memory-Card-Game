@@ -134,6 +134,7 @@ section .row i{
 }
 .flip{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); 
     transition:transform .3s ease;
 }
 .front-face,.back-face{
@@ -146,6 +147,7 @@ section .row i{
 }
 .front-face{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); 
     transition:transform .3s ease;
 }
 .fade{
